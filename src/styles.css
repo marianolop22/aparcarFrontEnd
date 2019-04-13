@@ -1,0 +1,430 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --blue-correo: rgb(0, 69, 137);
+    --blue-correo-menu: rgba(0, 69, 137, 0.3);
+    --blue-correo-icons: rgba(37, 72, 136, 1);
+    --yellow-correo: rgba(255, 199, 44, 1);
+    --card-border: rgba(190, 190, 190, 0.3);
+    --title-color: #555555;
+    --text-color: #888888;
+    --red-correo: rgba(164, 52, 58, 1);
+    --green-correo: rgba(0, 150, 57, 1);
+    --gray-correo: rgba(84, 88, 90, 1);
+    --navbar-height: 80px;
+    --nav-left: 60px;
+    --background-correo: rgba(248, 248, 248, 1);
+    /*
+   * Color de fondo en los clasificados, comunicaciones internas
+   * Noticias y los detalles de todas estas.
+   --ligth-background: #fafafa;
+  */
+    --ligth-background: #eee;
+    /* Menu */
+    --institucional: rgba(255, 187, 1, 1);
+    --noticias: rgba(0, 70, 139, 1);
+    --comunicacion-interna: rgba(0, 151, 45, 1);
+    --elecciones: rgba(84, 88, 90, 1);
+    --filatelia: rgba(255, 130, 13, 1);
+    --rrhh: rgba(192, 50, 56, 1);
+    --perfil: rgba(192, 50, 56, 1);
+    --clasificados: rgba(105, 97, 174, 1);
+    --solidario: rgba(84, 88, 91, 1);
+    --instalaciones: rgba(165, 52, 58, 1);
+    --social: rgba(37, 72, 136, 1);
+    --tecnologia: rgba(23, 121, 211, 1);
+    --prensa: rgba(163, 178, 96, 1);
+    --productos: rgba(103, 97, 169, 1);
+    --procesos: rgba(97, 201, 168, 1);
+    --intranet: rgba(211, 78, 37, 1);
+    --nuestra-gente: rgba(211, 78, 37, 1);
+    --blue-background: rgb(0, 69, 137, 0.9);
+    --gap-to-header: 30px;
+    --gap-to-footer: 50px;
+}
+
+
+/* Efectos */
+
+.zoomInDown {
+    -webkit-animation-name: zoomInDown;
+    animation-name: zoomInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+@keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+
+/* SE QUITA A PEDIDO DEL PIXEL */
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/*SE AGREGA A PEDIDO DE PIXEL*/
+
+.fade-in-top {
+    -webkit-animation: fade-in-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+    animation: fade-in-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes rubberBand {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes rubberBand {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+/* Fin edectos */
+
+html,
+body {
+    font-family: "open_sans", sans-serif !important;
+    background: var( --ligth-background);
+}
+
+.title {
+    font-family: "raleway", sans-serif !important;
+}
+
+@font-face {
+    font-family: "Frutiger";
+    src: url("./assets/fonts/Frutiger_LT_Std_55_Roman_Regular.otf") format("opentype");
+}
+
+
+/* FUENTES */
+
+@font-face {
+    font-family: "open_sans";
+    src: url("./assets/fonts/opensans-regular-webfont.woff2") format("woff2"), url("./assets/fonts/opensans-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url("./assets/fonts/raleway-regular-webfont.woff2") format("woff2"), url("./assets/fonts/raleway-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "comunidadcorreo";
+    src: url("./assets/fonts/comunidadcorreo.eot?k6g9hv");
+    src: url("./assets/fonts/comunidadcorreo.eot?k6g9hv#iefix") format("embedded-opentype"), url("./assets/fonts/comunidadcorreo.ttf?k6g9hv") format("truetype"), url("./assets/fonts/comunidadcorreo.woff?k6g9hv") format("woff"), url("./assets/fonts/comunidadcorreo.svg?k6g9hv#comunidadcorreo") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+::placeholder {
+    color: #aaaaaa !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #aaaaaa !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #aaaaaa !important;
+}
+
+.form .title {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #aaaaaa !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: transparent !important;
+    opacity: 1 !important;
+}
+
+.form textarea {
+    border-radius: 0px !important;
+    border: none;
+    padding-left: 0;
+    background: none;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.form label {
+    color: #666666;
+}
+
+
+/* TODO: Elimnar los margenes de 100 px y 66 px , se utilzia un margen top
+mt-navbar con la variable del alto de navbar*/
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mt-66 {
+    margin-top: 66px;
+}
+
+.mt-navbar {
+    margin-top: var(--navbar-height);
+}
+
+.gap-to-header {
+    padding-top: var(--gap-to-header);
+}
+
+.gap-to-footer {
+    padding-bottom: var(--gap-to-footer);
+}
+
+
+/*
+.container-fluid {
+    background-color: white;
+}*/
+
+.container-nav-left {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+}
+
+.navbar {
+    padding: 0rem 1rem;
+}
+
+@media (max-width:768px) {
+     :root {
+        --navbar-height: 40px;
+    }
+}
+
+@media (max-width:576px) {
+    .gap-to-header {
+        padding-top: 10px;
+    }
+    .gap-to-footer {
+        padding-bottom: 10px;
+    }
+    /*
+  .gap-to-header > div{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+*/
+    .container-nav-left {
+        /*    padding-right: 0px;
+    padding-left: 0px; */
+        margin: auto;
+    }
+}
+
+
+/* Esto es para tocar el borde del ngselect en caso de error. */
+
+.ng-select.ng-invalid.is-invalid .ng-select-container {
+    border-bottom-color: #dc3545!important;
+}
+
+
+/*Esto es para reescribir el borde de mydatepicker*/
+
+.is-invalid .mydp {
+    border-color: #ce2e2e;
+}
+
+
+/* body {
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+} */

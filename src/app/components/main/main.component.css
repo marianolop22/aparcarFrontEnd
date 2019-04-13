@@ -1,0 +1,4 @@
+.cBackground {
+    font-family: "open_sans", sans-serif !important;
+    background: var( --ligth-background);
+}

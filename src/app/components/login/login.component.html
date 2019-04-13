@@ -1,0 +1,49 @@
+<div class="row fadeIn">
+  <div class="col-md-7">
+    <app-left-side></app-left-side>
+  </div>
+
+  <div class="col-md-5 left-section align-self-center h-100">
+    <form class="form p-xl-5 m-xl-3 p-4" (ngSubmit)="login( loginForm )" #loginForm="ngForm">
+      <div class="form-group">
+        <!-- <img class="img-fluid pb-3" src="assets/images/logo-comunidadRGB.svg"> -->
+      </div>
+      <div class="form-group">
+        <label>Ingresá con tu usuario</label>
+      </div>
+      <div class="form-group">
+        <input type="text" 
+               class="form-control" 
+               placeholder="usuario" 
+               [(ngModel)]="username" 
+               name="userInput" 
+               #userInput="ngModel" 
+               maxlength="90" 
+               pattern="^[a-zA-Z]*$" 
+               [ngClass]="{ 'is-invalid': loginForm.submitted && userInput.invalid }"
+          required>
+        <div *ngIf="loginForm.submitted && userInput.invalid" class="invalid-feedback">
+          <div *ngIf="userInput.errors.required">Campo requerido</div>
+          <div *ngIf="userInput.errors.pattern">Formato de usuario inválido</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" 
+               class="form-control" 
+               placeholder="Contraseña" 
+               [(ngModel)]="password" 
+               name="passwordInput" 
+               #passwordInput="ngModel" 
+               [ngClass]="{ 'is-invalid': loginForm.submitted && passwordInput.invalid }" 
+               required>
+        <div *ngIf="loginForm.submitted && passwordInput.invalid" class="invalid-feedback">
+          <div *ngIf="passwordInput.errors.required">Campo requerido</div>
+        </div>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="messageError">
+        {{messageError}}
+      </div>
+      <button [disabled]="loading || loginForm.invalid" [spinner]="sendResponse()" type="submit" class="btn button col-md-5 col-sm-6 col-12">INGRESAR</button>
+    </form>
+  </div>
+</div>

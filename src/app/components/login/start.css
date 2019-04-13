@@ -1,0 +1,20 @@
+.logo-correo {
+   /* margin-top: 20px;*/
+    margin-left: 40px;
+    height: 40px;
+}
+
+.top-section {
+    background-color: var(--yellow-correo);
+    height: var(--navbar-height);
+    padding: 0 !important;
+    margin: 0 !important;
+}
+@media (max-width:768px){
+    .logo-correo{
+      height: 30px;
+      margin-left: auto!important;
+      margin-right: auto!important;
+    }
+  
+}

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <nav class="navbar fixed-top navbar-expand-md navbar-light  navbar-correo ">
+
+    <a class="navbar-brand" [routerLink]="['','principal']">
+      <img class="img-responsive" src="assets/images/logo-correo.png" alt="" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto  mt-2 mt-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Servicios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="[ 'servicios' ]">ABM de Servicio</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">ABM de Documentacion</a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav pull-sm-left">
+        <li class="nav-item">
+          <!-- Se oculta en Mobile -->
+          <div class="dropdown">
+            <button class="btn icons dropdown-toggle nav-link btn-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="mr-1" width="50" src="assets/images/avatar-busqueda-default.svg" alt="" />
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item disabled " href="#">{{_user.getUser().user}}</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item " [routerLink]="['/ingresar']" (click)="logOut()">Salir</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
